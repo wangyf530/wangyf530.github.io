@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    margin: auto;
+    /* padding: 5px; */
+    font-family: 標楷體;
+}
+
+/* header */
+header{
+    width: 1024px;
+    height: 65px;
+    /* background-color: lightblue; */
+    text-align: center;
+    border: 2px solid grey;
+    border-bottom: 0;
+}
+
+
+/* container */
+.container{
+    width: 1024px;
+    /* - 65 not -65 */
+    height: calc(768px - 65px - 20px);
+    /* background-color: wheat; */
+    
+    /* 因為 container 有左右兩個區塊 為了讓 aside 跟 main 放在同一層所以要改成 flexbox */
+    display: flex;
+}
+
+/* container-left */
+.aside-header{
+    width: 215px;
+    height: calc(768px - 65px - 20px - 25px);
+    border: 2px solid grey;
+    border-right: 0px;
+    display: flex;
+    flex-direction: column;
+}
+/* left - menu */
+.menu{
+    /* width: 215px; */
+    width: 100%;
+    /* height: calc(768px - 65px - 25px - 20px); */
+    /* height: calc(100% - 25px); */
+    /* flex-direction 主軸長度 item method = height */
+    flex-basis: calc(100% - 25px);
+    /* background-color: pink; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+/* 社團介紹 */
+.aside-title{
+    font-size: 24px;
+    color:#FF00FF;
+    /* border-bottom: 1px solid blue; */
+    width: fit-content;
+    height: 30px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    /* 讓文字跟底線中間有距離 */
+    text-underline-offset: 5px;
+}
+/* 每個社團的按鈕大小 */
+.menu-item{
+    margin: 10px;
+    height: 30px;
+    /* background-color: lightsalmon; */
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    background-image: url(./images/menu1.png);
+    padding: 5px;
+}
+.menu-item:hover{
+    background-image: url(./images/menu2.png);
+}
+/* left - update */
+.aside-footer{
+    width: 100%;
+    height: 25px;
+    /* background-color: coral; */
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-right:0px;
+    border-top:0px;
+    padding: 3px;
+}
+
+
+/* container-right */
+main{
+    width: calc(1024px - 215px);
+    height: calc(768px - 65px - 20px);
+    /* background-color: aqua; */
+}
+/* right - marquee */
+.main-header{
+    width: 100%;
+    height: 29px;
+    /* background-color: blanchedalmond; */
+    border: 2px solid grey;
+    font-size: 24px;
+    color: #0000FF;
+    text-align: center;
+}
+/* right - content */
+.content{
+    width: 100%;
+    height: calc(768px - 65px - 29px - 20px);;
+    background-color: seashell;
+    border: 2px solid grey;
+    border-top: 0px;
+}
+
+.content > iframe{
+    height: 100%;
+    width: 100%;
+    margin: 0px auto;
+}
+
+/* footer */
+footer{
+    width: 1024px;
+    height: 20px;
+    /* background-color: lightblue; */
+    text-align: center;
+    border: 2px solid grey;
+    border-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
